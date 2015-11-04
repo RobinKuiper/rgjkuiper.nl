@@ -26,7 +26,13 @@ $(document).ready(function() {
             $(this).append('<i class="fa fa-star-o">');
     });
 
-    $('.fancybox').fancybox();
+    $('.fancybox').fancybox({
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
     $('a').smoothScroll();
 
 });
