@@ -30,3 +30,46 @@ $(document).ready(function() {
     $('a').smoothScroll();
 
 });
+
+var target;
+
+$('#sidebar a').click(function(e){
+   target = $(e.target.hash);
+    console.log(e);
+    console.log(e.target.hash);
+    console.log(target);
+});
+
+var active = false;
+$(window).on({
+    'mousewheel': function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if(active) return;
+
+        active = true;
+        setTimeout(function(){ active = false; }, 500);
+
+        console.log('after timeout');
+
+        if(e.originalEvent.wheelDelta > 0) {
+            if(target === undefined){ target = $('.page');
+            }else{
+                if(!$(target.prev()).is('#sidebar')) {
+                    target = target.prev();
+                }
+            }
+        }else{
+            if(target === undefined){ target = $('.page').next();
+            }else{
+                if($(target.next()).hasClass('page')) {
+                    target = target.next();
+                }
+            }
+        }
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 600);
+    }
+});
