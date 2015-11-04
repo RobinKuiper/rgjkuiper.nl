@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Robin Kuiper -- Developer -- robingjkuiper@gmail.com (Skype: robinkuiper.eu)
 
 # THANKS
 
-    <name>
+    Everyone!
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
     Apache Server Configs, jQuery, Modernizr, Normalize.css
+    fancybox, Font Awesome, Bootstrap
