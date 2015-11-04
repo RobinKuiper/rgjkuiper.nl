@@ -1,0 +1,182 @@
+doctype html
+html.no-js(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
+        title Robin Kuiper
+        meta(name='description' content='')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='apple-touch-icon' href='apple-touch-icon.png')
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==' crossorigin='anonymous')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+        link(rel='stylesheet' href='js/vendor/fancybox/source/jquery.fancybox.css')
+        link(rel='stylesheet' href='css/normalize.css')
+        link(rel='stylesheet' href='css/main.css')
+        script(src='js/vendor/modernizr-2.8.3.min.js')
+
+    body
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        #header
+            h1 Robin Kuiper
+
+        #sidebar
+            ul
+                li
+                    a(href='#about') About Me
+                li
+                    a(href='#abilities') Abilities
+                li
+                    a(href='#project') Current Project
+                li
+                    a(href='#contact') Contact
+
+        #about.page
+            .content
+                .container-fluid
+                    .row
+                        .col-md-5
+                            h1 Who Am I?
+                            p I am an allround developer, mostly focussed on web development. I love to make things work the way you want them to work. At the moment I am mostly working with Meteor.js.
+                        .col-md-3
+                            img.img-responsive.img-circle(src='img/robin.jpg')
+                        .col-md-4
+                            h1 Details
+                            ul
+                                li
+                                    strong Name:
+                                    | Robin Kuiper
+                                li
+                                    strong Age:
+                                    | 27 years
+                                li
+                                    strong Location:
+                                    | Hoogezand, Netherlands
+
+        #abilities.page
+            .content
+                h1 Skills
+                table.table
+                    tr
+                        td HTML5
+                        td
+                            i.five.star
+                        td Java
+                        td
+                            i.three.star
+                    tr
+                        td CSS3
+                        td
+                            i.five.star
+                        td Wordpress
+                        td
+                            i.three.star
+                    tr
+                        td PHP
+                        td
+                            i.five.star
+                        td LESS
+                        td
+                            i.three.star
+                    tr
+                        td Bootstrap
+                        td
+                            i.five.star
+                        td Stylus
+                        td
+                            i.three.star
+                    tr
+                        td Meteor.js
+                        td
+                            i.four.star
+                        td C#
+                        td
+                            i.three.star
+                    tr
+                        td Laravel
+                        td
+                            i.four.star
+                        td Python
+                        td
+                            i.two.star
+                    tr
+                        td CodeIgniter
+                        td
+                            i.four.star
+                        td Ruby
+                        td
+                            i.two.star
+                    tr
+                        td jQuery
+                        td
+                            i.four.star
+                        td SASS
+                        td
+                            i.one.star
+                    tr
+                        td Javascript
+                        td
+                            i.four.star
+                    tr
+                        td Semantic-ui
+                        td
+                            i.four.star
+                    tr
+                        td JSON
+                        td
+                            i.four.star
+
+        #project.page
+            .content
+                h1 Streamer Platform
+                p Streamer Platform will be a platform to help a streamer with a lot of features.
+                .container-fluid
+                    .row
+                        .col-md-5
+                            a.thumbnail.fancybox(href='img/screenshots/streamerplatform.png')
+                                img(src='img/screenshots/streamerplatform.png')
+                        .col-md-7
+                            h4 Technologies
+                            ul
+                                li Meteor.js
+                                li Coffeescript
+                                li Jade
+                                li Stylus
+
+        #contact.page
+            .content
+                h1 Contact
+                .container-fluid
+                    .row
+                        .col-md-6
+                            ul
+                                li
+                                    a(href='#')
+                                        i.fa.fa-facebook
+                                        | Facebook
+                                li
+                                    a(href='#')
+                                        i.fa.fa-twitter
+                                        | Twitter
+                        .col-md-6
+                            ul
+                                li
+                                    a(href='#')
+                                        i.fa.fa-skype
+                                        | RobinKuiper.eu
+                                li
+                                    a(href='#')
+                                        i.fa.fa-at
+                                        | robingjkuiper@gmail.com
+
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+        script
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==' crossorigin='anonymous')
+        script(src='js/vendor/fancybox/source/jquery.fancybox.pack.js')
+        script(src='js/vendor/jquery.smooth-srcoll.js')
+        script(src='js/plugins.js')
+        script(src='js/main.js')
