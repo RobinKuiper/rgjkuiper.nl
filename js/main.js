@@ -46,6 +46,10 @@ $('#sidebar a').click(function(e){
     console.log(target);
 });
 
+$('#mobileSidebar .menu-handler .btn').click(function(){
+    $('#mobileSidebar .list-group').toggleClass('collapsed', 500);
+});
+
 var active = false;
 $(window).on({
     'mousewheel': function(e) {
