@@ -82,8 +82,10 @@ html.no-js(lang="en")
 
         #abilities.page
             .content
-                h1 Skills
                 .container-fluid
+                    .row
+                        .col-md-12
+                            h1 Skills
                     .row
                         .col-md-6
                             ul
@@ -149,6 +151,18 @@ html.no-js(lang="en")
                                 li
                                     span SASS
                                     span.stars(data-stars='1')
+                    .row.hidden-xs
+                        .col-md-6
+                            h1 Languages
+                    .row.hidden-xs
+                        .col-md-6
+                            ul
+                                li
+                                    span Dutch (native)
+                                    span.stars(data-stars='5')
+                                li
+                                    span English
+                                    span.stars(data-stars='4')
 
         #project.page
             .content
