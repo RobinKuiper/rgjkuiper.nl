@@ -1,18 +1,17 @@
 $(document).ready(function() {
 
     $('.stars').each(function () {
-        var total = 5;
+        //var total = 5;
         var stars = $(this).data('stars');
 
         for (var i = 0; i < stars; i++)
             $(this).append('<i class="fa fa-star">');
-        for (var j = 0; j < total - stars; j++)
-            $(this).append('<i class="fa fa-star-o">');
+        /*for (var j = 0; j < total - stars; j++)
+            $(this).append('<i class="fa fa-star-o">');*/
     });
 
     $('.fancybox').fancybox({
         helpers: {
-            margin: 50,
             overlay: {
                 locked: false
             }
