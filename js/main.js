@@ -51,14 +51,13 @@ $('#mobileSidebar .list-group-item').click(function(){
 var active = false;
 $(window).on({
     'keydown': function(e){
-        e.preventDefault();
-        e.stopPropagation();
-
-        if(active) return;
-
         var keycode = e.keyCode;
-        console.log(keycode);
         if(keycode == 40 || keycode == 38) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if(active) return;
+
             if (keycode == 38) {
 
                 if (target === undefined) {
