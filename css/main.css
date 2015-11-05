@@ -200,8 +200,8 @@ html, body, .page{
 }
 
 .page{
-    padding-top: 150px;
-    padding-left: 300px;
+    padding-top: 15%;
+    padding-left: 21%;
     background-color: black;
     background-size: 100% 100%;
     overflow: hidden;
