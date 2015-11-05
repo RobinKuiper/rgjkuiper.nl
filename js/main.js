@@ -1,45 +1,28 @@
 $(document).ready(function() {
 
-    $('.star').each(function () {
+    $('.stars').each(function () {
         var total = 5;
-        var stars = 0;
-        if ($(this).hasClass('one')) {
-            stars = 1
-        }
-        if ($(this).hasClass('two')) {
-            stars = 2
-        }
-        if ($(this).hasClass('three')) {
-            stars = 3
-        }
-        if ($(this).hasClass('four')) {
-            stars = 4
-        }
-        if ($(this).hasClass('five')) {
-            stars = 5
-        }
+        var stars = $(this).data('stars');
 
         for (var i = 0; i < stars; i++)
             $(this).append('<i class="fa fa-star">');
-
         for (var j = 0; j < total - stars; j++)
             $(this).append('<i class="fa fa-star-o">');
     });
 
     $('.fancybox').fancybox({
         helpers: {
+            margin: 50,
             overlay: {
                 locked: false
             }
         }
     });
-    $('#sidebar a').smoothScroll();
-
 });
 
 var target;
 
-$('#sidebar a').click(function(e){
+$('#sidebar a').smoothScroll().click(function(e){
    target = $(e.target.hash);
 });
 
@@ -84,13 +67,10 @@ $(window).on({
         else
             delta = e.originalEvent.wheelDelta;
 
-        console.log(delta);
-
         active = true;
         setTimeout(function(){ active = false; }, 500);
 
         if(delta > 0) {
-            console.log('Naar beneden!');
             if(target === undefined){ target = $('.page');
             }else{
                 if(!$(target.prev()).is('#sidebar')) {
@@ -98,7 +78,6 @@ $(window).on({
                 }
             }
         }else{
-            console.log('Omhoog!');
             if(target === undefined){ target = $('.page').next();
             }else{
                 if($(target.next()).hasClass('page')) {

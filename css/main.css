@@ -254,7 +254,7 @@ html, body, .page{
     display: block;
     float: left;
 }
-#abilities ul li i {
+#abilities ul li span.stars {
     float: right;
 }
 
