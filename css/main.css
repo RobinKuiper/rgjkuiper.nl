@@ -192,6 +192,14 @@ html, body, .page{
 #sidebar ul li{
     margin-bottom: 5px;
 }
+#sidebar ul li small{
+    background-color: black;
+    padding: 3px;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-top: -15px;
+    font-size: 10px;
+}
 
 #sidebar ul li a{
     font-family: 'Open Sans', sans-serif;
