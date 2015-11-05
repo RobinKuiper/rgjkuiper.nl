@@ -191,6 +191,12 @@ html, body, .page{
 
 #sidebar ul li{
     margin-bottom: 5px;
+    padding-left: 0;
+    -webkit-transition: padding-left 1s;
+    transition: padding-left 1s;
+}
+#sidebar ul li:hover{
+    padding-left: 10px;
 }
 #sidebar ul li small{
     background-color: black;
@@ -223,6 +229,8 @@ html, body, .page{
 .page .content{
     background-color: rgba(0,0,0,0.6);
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 
     min-height: 40%;
     margin-right: 10%;
