@@ -19,21 +19,22 @@ html.no-js(lang="en")
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        #socialbar 
+        #socialbar
             a(href='https://www.facebook.com/robin.kuiper' target='_blank')
                 i.fa.fa-facebook
             a(href='https://www.twitter.com/rgjkuiper' target='_blank')
                 i.fa.fa-twitter
 
-        #header
-            button#mobileSidebarButton.visible-xs-block
-                i.fa.fa-bars
-            h1.hidden-xs Robin Kuiper
+        #header.hidden-xs
+            h1 Robin Kuiper
+
+        button#mobileSidebarButton.visible-xs-block.visible-sm-block
+            i.fa.fa-bars
 
         #mobileHeader.visible-xs-block
             h1 Robin Kuiper
 
-        #sidebar.hidden-xs
+        #sidebar.hidden-xs.hidden-sm
             ul
                 li
                     a(href='#about') About Me
@@ -51,7 +52,6 @@ html.no-js(lang="en")
                 a.list-group-item(href='#abilities') Abilities
                 a.list-group-item(href='#project') Current Project
                 a.list-group-item(href='#contact') Contact
-
         #about.page
             .content
                 .container-fluid
@@ -60,7 +60,7 @@ html.no-js(lang="en")
                             h1 Who Am I?
                             p I am an allround developer, mostly focussed on web development. I love to make things work the way you want them to work. At the moment I am mostly working with Meteor.js.
                         .col-md-3
-                            img.img-responsive.img-circle.hidden-xs(src='img/robin.jpg')
+                            img.img-responsive.img-circle.hidden-xs.hidden-sm(src='img/robin.jpg')
                         .col-md-4
                             h1 Details
                             ul

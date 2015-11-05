@@ -98,6 +98,12 @@ textarea {
 /*************************
 * MOBILE
 *************************/
+#mobileSidebarButton{
+    z-index: 11;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
 #mobileHeader{
     text-align: center;
 }
@@ -109,7 +115,7 @@ textarea {
     padding-bottom: 15px;
 }
 #mobileSidebar{
-    z-index: 99;
+    z-index: 10;
     position: fixed;
 }
 #mobileSidebar{
@@ -133,10 +139,6 @@ textarea {
     color: black;
 }
 
-#mobileSidebar .list-group.collapsed{ left: -130px; }
-
-.menu-handler{ display: none }
-
 
 
 
@@ -146,9 +148,12 @@ html, body, .page{
     height: 100%;
 }
 
-#header, #sidebar, #socialbar{
-    z-index: 999;
+#sidebar, #socialbar, #header{
+    z-index: 11;
     position: fixed;
+}
+#header{
+    z-index: 9;
 }
 
 #socialbar{
