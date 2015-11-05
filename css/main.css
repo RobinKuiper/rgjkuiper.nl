@@ -241,8 +241,21 @@ html, body, .page{
     background: url('../img/backgrounds/mouse.jpg');
     background-size: 100% 100%;
 }
-#abilities table td{
-    border: none
+#abilities ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#abilities ul li{
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+#abilities ul li span{
+    display: block;
+    float: left;
+}
+#abilities ul li i {
+    float: right;
 }
 
 #project{
