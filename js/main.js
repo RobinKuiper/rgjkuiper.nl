@@ -50,6 +50,41 @@ $('#mobileSidebar .list-group-item').click(function(){
 
 var active = false;
 $(window).on({
+    'keydown': function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        if(active) return;
+
+        var keycode = e.keyCode;
+        console.log(keycode);
+        if(keycode == 40 || keycode == 38) {
+            if (keycode == 38) {
+
+                if (target === undefined) {
+                    target = $('.page');
+                } else {
+                    if (!$(target.prev()).is('#sidebar')) {
+                        target = target.prev();
+                    }
+                }
+            } else if (keycode == 40) {
+                if (target === undefined) {
+                    target = $('.page').next();
+                } else {
+                    if ($(target.next()).hasClass('page')) {
+                        target = target.next();
+                    }
+                }
+            }
+            active = true;
+            setTimeout(function(){ active = false; }, 500);
+
+            $('html,body').animate({
+                scrollTop: $(target).offset().top
+            }, 600);
+        }
+    },
     'mousewheel DOMMouseScroll': function(e) {
         e.preventDefault();
         e.stopPropagation();
