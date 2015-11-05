@@ -95,13 +95,59 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*************************
+* MOBILE
+*************************/
+#mobileHeader{
+    text-align: center;
+}
+#mobileHeader h1{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#mobileSidebar{
+    z-index: 99;
+    position: fixed;
+}
+#mobileSidebar{
+    display: none;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: black;
+}
+#mobileSidebar h1{
+    color: white;
+    text-align: center;
+}
+#mobileSidebar .list-group-item{
+    background-color: black;
+    color: white;
+    border: 1px solid #222222;
+}
+#mobileSidebar .list-group-item.active{
+    background-color: lightblue;
+    color: black;
+}
+
+#mobileSidebar .list-group.collapsed{ left: -130px; }
+
+.menu-handler{ display: none }
+
+
+
+
+
 
 html, body, .page{
     height: 100%;
 }
 
-#header, #sidebar, #mobileSidebar, #socialbar{
-    z-index: 99;
+#header, #sidebar, #socialbar{
+    z-index: 999;
     position: fixed;
 }
 
@@ -152,23 +198,6 @@ html, body, .page{
 #sidebar ul li a:hover{
     color: #c0c0c0;
 }
-
-#mobileSidebar{
-    top: 30%;
-}
-#mobileSidebar .list-group{
-    position: absolute;
-    width: 130px;
-    left: 0;
-}
-#mobileSidebar .list-group .list-group-item, #mobileSidebar .menu-handler .btn{
-    border-radius: 0;
-}
-#mobileSidebar .menu-handler .btn{
-    background-color: black;
-    color: #c0c0c0;
-}
-#mobileSidebar .list-group.collapsed{ left: -130px; }
 
 .page{
     padding-top: 150px;
