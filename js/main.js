@@ -83,3 +83,7 @@ $(window).on({
         }, 600);
     }
 });
+
+/*if (screen.width <= 800) {
+    window.location = "http://m.rgjkuiper.nl";
+}*/
