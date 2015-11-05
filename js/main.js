@@ -33,7 +33,7 @@ $(document).ready(function() {
             }
         }
     });
-    $('a').smoothScroll();
+    $('#sidebar a').smoothScroll();
 
 });
 
@@ -41,9 +41,6 @@ var target;
 
 $('#sidebar a').click(function(e){
    target = $(e.target.hash);
-    console.log(e);
-    console.log(e.target.hash);
-    console.log(target);
 });
 
 $('#mobileSidebarButton').click(function(){
@@ -71,18 +68,29 @@ $('#mobileSidebar .list-group-item').click(function(){
 
 var active = false;
 $(window).on({
-    'mousewheel': function(e) {
+    'mousewheel DOMMouseScroll': function(e) {
         e.preventDefault();
         e.stopPropagation();
 
         if(active) return;
 
+        // Firefox fix
+        var delta = 0;
+        if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
+            if(e.originalEvent.detail > 0){
+                delta = -1;
+            }else
+                delta = 1;
+        else
+            delta = e.originalEvent.wheelDelta;
+
+        console.log(delta);
+
         active = true;
         setTimeout(function(){ active = false; }, 500);
 
-        console.log('after timeout');
-
-        if(e.originalEvent.wheelDelta > 0) {
+        if(delta > 0) {
+            console.log('Naar beneden!');
             if(target === undefined){ target = $('.page');
             }else{
                 if(!$(target.prev()).is('#sidebar')) {
@@ -90,6 +98,7 @@ $(window).on({
                 }
             }
         }else{
+            console.log('Omhoog!');
             if(target === undefined){ target = $('.page').next();
             }else{
                 if($(target.next()).hasClass('page')) {
@@ -97,7 +106,7 @@ $(window).on({
                 }
             }
         }
-        $('html, body').animate({
+        $('html,body').animate({
             scrollTop: $(target).offset().top
         }, 600);
     }
