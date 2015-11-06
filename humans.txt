@@ -12,5 +12,5 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Apache Server Configs, jQuery(ui), Modernizr, Normalize.css
     fancybox, Font Awesome, Bootstrap

@@ -49,16 +49,32 @@ $('#mobileSidebar .list-group-item').click(function(){
 });
 
 var active = false;
+var string = '';
+var code = '7848486683';
 $(window).on({
     'keydown': function(e){
         var keycode = e.keyCode;
-        if(keycode == 40 || keycode == 38) {
+        string += keycode;
+
+        if(string.length === 10){
+            if(string === code){
+                $('#flash').slideDown();
+
+                setTimeout(function(){ $('#flash').slideUp(); }, 3000);
+
+                string = '';
+            }else {
+                string = '';
+            }
+        }
+
+        if(keycode === 40 || keycode === 38) {
             e.preventDefault();
             e.stopPropagation();
 
             if(active) return;
 
-            if (keycode == 38) {
+            if (keycode === 38) {
 
                 if (target === undefined) {
                     target = $('.page');
@@ -67,7 +83,7 @@ $(window).on({
                         target = target.prev();
                     }
                 }
-            } else if (keycode == 40) {
+            } else if (keycode === 40) {
                 if (target === undefined) {
                     target = $('.page').next();
                 } else {
@@ -123,6 +139,16 @@ $(window).on({
         }, 600);
     }
 });
+
+/*setInterval(function(){
+    if(target === undefined || target.is('#home')){
+        $('#sidebar').fadeOut();
+        $('#header').fadeOut();
+    }else{
+        $('#sidebar').fadeIn();
+        $('#header').fadeIn();
+    }
+}, 500);*/
 
 /*if (screen.width <= 800) {
     window.location = "http://m.rgjkuiper.nl";
