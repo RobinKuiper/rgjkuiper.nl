@@ -42,13 +42,13 @@ html.no-js(lang="en")
         #sidebar.hidden-xs.hidden-sm
             ul
                 li
-                    a(href='#about') About Me
+                    a.scroll(href='#about') About Me
                 li
-                    a(href='#abilities') Abilities
+                    a.scroll(href='#abilities') Abilities
                 li
-                    a(href='#project') Current Project
+                    a.scroll(href='#project') Current Project
                 li
-                    a(href='#contact') Contact
+                    a.scroll(href='#contact') Contact
                 li &nbsp;
                 //li
                     a(href='/blog')
@@ -64,10 +64,12 @@ html.no-js(lang="en")
                 a.list-group-item(href='#contact') Contact
                 //a.list-group-item(href='/blog') Blog (nl)
 
-        //#home.page
+        #home.page
             .container-fluid
                 h1 Robin Kuiper
                 h2 Allround Developer
+            #goDownButton
+                a.scroll.fa.fa-arrow-down(href='#about')
 
         #about.page
             .content

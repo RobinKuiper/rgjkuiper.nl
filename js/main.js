@@ -21,8 +21,11 @@ $(document).ready(function() {
 
 var target;
 
-$('#sidebar a').smoothScroll().click(function(e){
-   target = $(e.target.hash);
+if(window.location.hash !== '')
+    target = $(window.location.hash);
+
+$('a.scroll').smoothScroll().click(function(e){
+    target = $(e.target.hash);
 });
 
 $('#mobileSidebarButton').click(function(){
@@ -140,7 +143,7 @@ $(window).on({
     }
 });
 
-/*setInterval(function(){
+setInterval(function(){
     if(target === undefined || target.is('#home')){
         $('#sidebar').fadeOut();
         $('#header').fadeOut();
@@ -148,7 +151,7 @@ $(window).on({
         $('#sidebar').fadeIn();
         $('#header').fadeIn();
     }
-}, 500);*/
+}, 500);
 
 /*if (screen.width <= 800) {
     window.location = "http://m.rgjkuiper.nl";
