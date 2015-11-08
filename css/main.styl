@@ -1,0 +1,493 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles opinionated defaults
+   ========================================================================== */
+
+html
+    color #222
+    font-size 1em
+    line-height 1.4
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection
+    background #b3d4fc
+    text-shadow none
+
+
+::selection
+    background #b3d4fc
+    text-shadow none
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr
+    display block
+    height 1px
+    border 0
+    border-top 1px solid #ccc
+    margin 1em 0
+    padding 0
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+    vertical-align middle
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset
+    border 0
+    margin 0
+    padding 0
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea
+    resize vertical
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade
+    margin 0.2em 0
+    background #ccc
+    color #000
+    padding 0.2em 0
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*************************
+* MOBILE
+*************************/
+#mobileSidebarButton
+    z-index 11
+    position fixed
+    top 10px
+    left 10px
+
+#mobileHeader
+    text-align center
+    h1
+        background-color black
+        color white
+        margin 0
+        padding-top 15px
+        padding-bottom 15px
+
+#mobileSidebar
+    z-index 10
+    position fixed
+    display none
+    top 0
+    height 100%
+    width 0
+    background-color black
+    h1
+        color white
+        text-align center
+    .list-group-item
+        background-color black
+        color white
+        border 1px solid #222222
+        .active
+            background-color lightblue
+            color black
+
+html, body, .page
+    height 100%
+
+#flash
+    display none
+    background rgba(245, 245, 245, 0.8)
+    /* background rgba(0,0,0,0.8) */
+    color black
+    position fixed
+    width 100%
+    /*height 100% */
+    z-index 999
+    text-align center
+
+#sidebar, #socialbar, #header
+    z-index 11
+    position fixed
+
+#socialbar
+    top 10px
+    right 10px
+    a
+        margin-left 7px
+        color white
+        &:hover
+            color #c0c0c0
+
+#header
+    z-index 9
+    top 10px
+    left 10px
+    display none
+    h1
+        color white
+        font-size 40px
+        font-family 'Helvetica Neue', sans-serif
+        font-weight bold
+        letter-spacing -1px
+        line-height 1
+        text-align center
+        text-shadow 2px 2px #000000
+
+#sidebar
+    top 20%
+    display none
+    ul
+        list-style none
+        padding-left 15px
+        li
+            margin-bottom 5px
+            padding-left 0
+            -webkit-transition padding-left 1s
+            transition padding-left 1s
+            &:hover
+                padding-left 10px
+            small
+                background-color black
+                padding 3px
+                border-radius 3px
+                margin-left 5px
+                margin-top -15px
+                font-size 10px
+            a
+                font-family 'Open Sans', sans-serif
+                font-size 30px
+                color white
+                text-decoration none
+                text-shadow 2px 2px #000000
+                &:hover
+                    color #c0c0c0
+
+.page
+    background-color black
+    background-size 100% 100%
+    overflow hidden
+    .content
+        background-color rgba(0,0,0,0.6)
+        color white
+        font-family 'Roboto', sans-serif
+        font-weight 100
+
+        margin-top 15%
+        margin-left 21%
+
+        min-height 40%
+        margin-right 10%
+
+        padding 3%
+
+        border-radius 5px
+
+@keyframes updown
+    0%    bottom 4px
+    50%   bottom 14px
+    100%  bottom 4px
+
+#home
+    /*background url('../img/backgrounds/space.jpg') */
+    text-align center
+    background-size 100% 100%
+    background-attachment fixed
+    background-position center center
+    .container-fluid
+        position relative
+        top 28%
+    h1
+        font-family 'Roboto', sans-serif
+        font-size 5em
+        color white
+
+        padding-bottom 30px
+        margin-right 30%
+        margin-left 30%
+        margin-bottom 10px
+        border-bottom 1px solid white
+    h2
+        font-family 'Roboto', sans-serif
+        color #c0c0c0
+
+        margin 0  padding 0
+
+    #goDownButton
+            position absolute
+            bottom 4px
+            right 5%
+            font-size 15em
+            height 250px
+            -webkit-animation-name updown
+            -moz-animation-name updown
+            -o-animation-name updown
+            animation-name updown
+            -webkit-animation-duration 1s
+            -moz-animation-duration 1s
+            -o-animation-duration 1s
+            animation-duration 1s
+            -webkit-animation-iteration-count infinite
+            -moz-animation-iteration-count infinite
+            -o-animation-iteration-count infinite
+            animation-iteration-count infinite
+
+#home #goDownButton a:hover, #home #goDownButton a:active, #home #goDownButton a:visited
+    text-decoration none
+
+#about
+    background url('../img/backgrounds/keyboard.jpg')
+    background-size 100% 100%
+
+#abilities
+    background url('../img/backgrounds/mouse.jpg')
+    background-size 100% 100%
+    background-attachment fixed
+    background-position center center
+    ul
+        list-style none
+        margin 0
+        padding 0
+        li
+            padding 3px
+            overflow hidden
+            padding-right 0
+            -webkit-transition padding-right 2s
+            transition padding-right 1s
+            &:hover
+                background-color rgba(34,34,34,0.7)
+                padding-right 10px
+            span
+                display block
+                float left
+            span.stars
+                float right
+
+#project
+    background url('../img/backgrounds/notes.jpg')
+    background-size 100% 100%
+
+#contact
+    background url('../img/backgrounds/girl.jpg')
+    background-size 100% 100%
+    background-attachment fixed
+    background-position center center
+    ul
+        list-style none
+        padding 0
+        li
+            margin-bottom 20px
+            a
+                color white
+                font-size 20px
+                font-weight 900
+                &:hover
+                    color #c0c0c0
+                i
+                    width 15%
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden
+    display none !important
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden
+    border 0
+    clip rect(0 0 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute
+    width 1px
+
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+    clip auto
+    height auto
+    margin 0
+    overflow visible
+    position static
+    width auto
+
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible
+    visibility hidden
+
+
+/*
+ * Clearfix contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after
+    content " "  /* 1 */
+    display table  /* 2 */
+
+
+.clearfix:after
+    clear both
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width 35em)
+    /* Style adjustments for viewports that meet the condition */
+
+
+@media print,  (-webkit-min-device-pixel-ratio: 1.25),  (min-resolution: 1.25dppx),  (min-resolution: 120dpi) {
+/* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print
+    *,
+    *:before,
+    *:after
+        background transparent !important
+        color #000 !important  /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow none !important
+        text-shadow none !important
+
+
+    a,
+    a:visited
+        text-decoration underline
+
+
+    a[href]:after
+        content " (" attr(href) ")"
+
+
+    abbr[title]:after
+        content " (" attr(title) ")"
+
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after
+        content ""
+
+
+    pre,
+    blockquote
+        border 1px solid #999
+        page-break-inside avoid
+
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead
+        display table-header-group
+
+
+    tr,
+    img
+        page-break-inside avoid
+
+
+    img
+        max-width 100% !important
+
+
+    p,
+    h2,
+    h3
+        orphans 3
+        widows 3
+
+
+    h2,
+    h3
+        page-break-after avoid
+
+
