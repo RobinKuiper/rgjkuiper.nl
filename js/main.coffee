@@ -101,6 +101,7 @@ $(window).on
             scrollTop: $(target).offset().top
         , 600
 
+###
 setInterval ->
     if target == undefined || target.is '#home'
         $('#sidebar').fadeOut()
@@ -108,6 +109,7 @@ setInterval ->
     else
         $('#sidebar').fadeIn()
         $('#header').fadeIn()
+###
 
 
 ### Mobile ###
