@@ -20,6 +20,7 @@ string = ''
 code = '7848486683'
 
 $(window).on
+    # Catch key presses
     'keydown': (e) ->
         keycode = e.keyCode
         string += keycode
@@ -42,6 +43,7 @@ $(window).on
 
             return if active
 
+            # Function?
             if keycode == 38
                 if target == undefined
                     target = $('.page')
@@ -58,7 +60,7 @@ $(window).on
                 active = false
             , 500
 
-            $('html, body').animate
+            $('html,body').animate
                 scrollTop: $(target).offset().top
             , 600
 
@@ -87,15 +89,13 @@ $(window).on
         if delta > 0
             if target == undefined
                 target = $('.page')
-            else
-                if !$(target.prev()).is '#sidebar'
-                    target = target.prev()
+            else if !$(target.prev()).is '#sidebar'
+                target = target.prev()
         else
             if target == undefined
                 target = $('.page').next()
-            else
-                if $(target.next()).hasClass('page')
-                    target = target.next()
+            else if $(target.next()).hasClass('page')
+                target = target.next()
 
         $('html, body').animate
             scrollTop: $(target).offset().top
