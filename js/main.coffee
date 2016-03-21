@@ -1,10 +1,15 @@
 $(document).ready ->
+    # Add stars to the Abilities
     $('.stars').each ->
         stars = $(this).data 'stars'
+
+        # Set the first one.
+        $(this).append('<i class="fa fa-star">')
 
         while stars -= 1
             $(this).append('<i class="fa fa-star">')
 
+    # Fancybox
     $('.fancybox').fancybox { helpers: overlay: locked: false }
 
 # Set target if link has an hash
@@ -12,7 +17,7 @@ if window.location.hash != ''
     target = $(window.location.hash)
 
 # Do a nice scroll when clicked on an intern link
-$('.scroll').smoothScroll().click (e) ->
+$('.scroll').smoothScroll({ speed: 900 }).click (e) ->
     target = $(e.target.hash)
 
 active = false
