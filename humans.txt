@@ -8,9 +8,11 @@
 # THANKS
 
     Everyone!
+    # Type n00bs
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
     Apache Server Configs, jQuery(ui), Modernizr, Normalize.css
     fancybox, Font Awesome, Bootstrap
+    Coffeescript, Jade, Stylus

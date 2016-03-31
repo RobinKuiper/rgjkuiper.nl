@@ -12,6 +12,9 @@ $(document).ready ->
     # Fancybox
     $('.fancybox').fancybox { helpers: overlay: locked: false }
 
+    $('#carousel').slick
+        autoplay: true
+
 # Set target if link has an hash
 if window.location.hash != ''
     target = $(window.location.hash)
